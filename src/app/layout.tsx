@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/footer/footer";
-import Nabvar from "@/components/navbar";
+import Nabvar from "@/components/navbar/navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,11 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Nabvar/>
-        {children}
+      <body className={`bg-orange-100 h-screen ${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <header>
+            <Nabvar/>
+        </header>
+        <main className = "flex-1">
+            {children}
+        </main>
         <Footer/>
       </body>
     </html>
