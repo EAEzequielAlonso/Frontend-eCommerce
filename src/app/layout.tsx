@@ -27,14 +27,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-orange-100 h-screen ${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`bg-orange-100 flex flex-col min-h-screen ${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/image/fondo.jpg')] bg-cover bg-center  bg-fixed`}>
         <header>
             <Nabvar/>
         </header>
         <main className = "flex-1">
             {children}
         </main>
-        <Footer/>
+        <footer>
+            <Footer/>
+        </footer>
       </body>
     </html>
   );
