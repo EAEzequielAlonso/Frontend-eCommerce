@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Card: React.FC<Product> = ({name, price, imgUrl}) => {
     return (
-        <div className = "flex flex-col border-2 bg-white border-orange-500 p-2 rounded-xl hover:scale-105 duration-300 transition shadow-xl text-xl  w-[300px]">
+        <div className = "flex flex-col border-2 bg-white border-cyan-700 p-2 rounded-xl hover:scale-105 duration-300 transition shadow-xl text-xl  w-[300px]">
             <div className = "w-[250px] h-[250px] mx-auto mt-2 flex justify-center items-center">
                 <img src={imgUrl} className = "rounded-2xl hover:scale-110 transition duration-300"></img>
             </div>

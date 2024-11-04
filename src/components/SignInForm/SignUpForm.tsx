@@ -1,9 +1,14 @@
-import Link from "next/link";
+"use client"
+
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { TfiEmail } from "react-icons/tfi";
 
-export default function SignUpForm () {
+interface SignUpProps {
+    inUp: () => void;
+  }
+
+export const SignUpForm: React.FC<SignUpProps> = ({inUp}) => {
     return (
         <div>
         <div className = "bg-slate-900 border text-xl border-orange-500 rounded-xl p-8 shadow-lg backdrop-filter backdrop-blur-sm bg-opacity-30 mt-20 relative">
@@ -31,8 +36,8 @@ export default function SignUpForm () {
                 </div>
                 
                 <button type="submit" className="w-full mb-4 text-[18px] mt-6 rounded-full bg-white text-emerald-800 hover:bg-orange-700 active:bg-orange-800 hover:text-white py-2 transition-colors" >SignIn</button>
-                <div>
-                    <span className= "m-4">¿Ya tienes una cuenta? <Link href="signin" className= "text-blue-950">Haz Login</Link></span>
+                <div className="flex items-center">
+                    <span className= "m-4">¿Ya tienes una cuenta?</span> <p className= "text-blue-950" onClick={inUp}>Haz Login</p>
                 </div>
             </form>
             </div>
